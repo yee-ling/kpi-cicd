@@ -25,5 +25,5 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt -r requirements-dev.txt
-      - run: python boostrap/train_and_register.py
+      - run: python bootstrap/train_and_register.py
       - run: pytest --cov=app --cov-report=term
