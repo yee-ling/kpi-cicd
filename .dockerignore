@@ -1,44 +1,22 @@
-# Git
-.git
-.gitignore
+# Keep the build context small and the image clean.
+# Generated MLflow state — the build regenerates it (bake) or the registry owns it.
+mlflow.db
+mlruns/
+mlartifacts/
 
-# Docker
-Dockerfile
-docker-compose.yml
-
-# Python
+# Python cruft
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-
-# Testing / CI
 .pytest_cache/
-.coverage
-htmlcov/
-
-# Node / frontend (if you have React/Next.js)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.next/
-out/
-
-# IDE / OS
-.vscode/
-.idea/
-.DS_Store
-
-# Environment variables
+.ruff_cache/
 .env
-.env.local
-.env.*.local
 
-# Logs
-logs/
-*.log
+# Dev / docs / VCS — not needed inside the image
+.git/
+.gitignore
+*.md
+docs/
+tests/
+Dockerfile*
+docker-compose.yml
+verify.sh

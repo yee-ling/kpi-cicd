@@ -1,16 +1,13 @@
 [flake8]
-max-line-length = 88
-extend-ignore = E203, W503
+max-line-length = 120
+extend-ignore = E203,W501
 exclude =
     .git,
     __pycache__,
     mlruns,
     mlartifacts,
     data,
-    build,
-    venv,
     .venv,
-    env,
-    node_modules,
-    .pytest_cache,
-    migrations
+    venv,
+    build,
+    dist,
